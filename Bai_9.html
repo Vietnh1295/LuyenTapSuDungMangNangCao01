@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+    var arrayA=[];var arrayB=[];
+
+    function NhapMangA()
+    {
+        for(var i=0;i<10;i++){
+            arrayA.push(parseInt(prompt('Nhap mang A so thu'+(i+1))));
+        }
+    }
+    function NhapMangB()
+    {
+        for(var i=0;i<10;i++){
+            arrayB.push(parseInt(prompt('Nhap mang B so thu'+(i+1))));
+        }
+    }
+    function NoiMang()
+    {
+        var arrayC=arrayA.concat(arrayB)
+        alert('mang C= '+ arrayC);
+    }
+    NhapMangA();
+    NhapMangB();
+    NoiMang();
+</SCRIPT>
+</body>
+</html>

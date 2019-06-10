@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num=parseInt(prompt('nhap tu'));
+    var array=[];
+    function NhapMang()
+    {
+        for(var i=0;i<num;i++){
+            array.push(parseInt(prompt('Nhap so thu'+(i+1))));
+        }
+    }
+    function Dem()
+    {
+        var count=0;
+        for(var i =0;i<array.length;i++)
+        {
+            if(array[i]<0)
+            {
+                count++;
+            }
+        }
+        if(count==0)
+        {
+            alert('không có số âm')
+        }else
+            {
+        alert('só âm trong mảng là '+count);
+        }
+    }
+    NhapMang();
+    Dem();
+</script>
+</body>
+</html>

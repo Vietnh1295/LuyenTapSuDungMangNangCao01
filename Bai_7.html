@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num=parseInt(prompt('nhap tu'));
+    var array=[];
+    function NhapMang()
+    {
+        for(var i=0;i<num;i++){
+            array.push(parseInt(prompt('Nhap so thu'+(i+1))));
+        }
+    }
+    function KiemTra()
+    {
+        var soV=parseInt(prompt('Nhap so nguyen can tim là '))
+        var count=0;
+        var index=0;
+        for(var i =0;i<array.length;i++)
+        {
+            if(array[i]==soV)
+            {
+                count++;
+                index=i;
+            }
+        }
+        if(count==0)
+        {
+            alert('V is not in array')
+        }else
+        {
+            for(var j=index;j<array.length-1;j++)
+            {
+                var temp=array[j];
+                array[j]=array[j+1];
+                array[j+1]=temp;
+            }
+            array.pop();
+            alert('array after delete V '+array);
+        }
+    }
+    NhapMang();
+    KiemTra();
+</script>
+</body>
+</html>

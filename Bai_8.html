@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num=parseInt(prompt('nhap tu'));
+    var array=[];
+    function NhapMang()
+    {
+        for(var i=0;i<num;i++){
+            array.push(parseInt(prompt('Nhap so thu'+(i+1))));
+        }
+    }
+    function SapXepMang()
+    {
+        var j=0;
+        for(var i=0;i<array.length;i++)
+        {
+            var j=i;
+            for(;j<array.length;j++)
+            {
+                if(array[i]<array[j])
+                {
+                    var temp=array[i];
+                    array[i]=array[j];
+                    array[j]=temp;
+                }
+            }
+        }
+        alert(array);
+    }
+    NhapMang();
+    SapXepMang();
+</script>
+</body>
+</html>

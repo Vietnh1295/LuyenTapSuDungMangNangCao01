@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num=parseInt(prompt('nhap tu'));
+    var array=[];
+    function NhapMang()
+    {
+        for(var i=0;i<num;i++){
+            array.push(parseInt(prompt('Nhap so thu'+(i+1))));
+        }
+    }
+    function KiemTraMax()
+    {
+        var max=array[0];
+        for(var i=0;i<max;i++)
+        {
+            if(max<array[i])
+            {
+                max=array[i];
+            }
+        }
+        alert(max);
+    }
+    NhapMang();
+    KiemTraMax();
+</script>
+</body>
+</html>
